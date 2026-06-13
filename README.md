@@ -1,13 +1,6 @@
 # أرشيف شجرة الرويجح
 
-Premium Arabic-first interactive lineage website built from the attached PDF.
 
-## Data Rules
-
-- Relationships are father to son only.
-- No spouses, mothers, locations, biographies, birth dates, or fabricated relatives are included.
-- The structured source data is in `data/family.json`.
-- The PDF extraction keeps source coordinates for auditability.
 
 ## Run
 
