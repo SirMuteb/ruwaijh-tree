@@ -260,7 +260,7 @@ export function LineageTree({ registerActions }: { registerActions: (actions: { 
   return (
     <section
       dir="rtl"
-      className="relative mx-auto mt-4 h-[76vh] min-h-[580px] w-[min(1520px,calc(100vw-24px))] overflow-hidden rounded-[32px] border border-amber-900/20 shadow-museum flex flex-col"
+      className="relative mx-auto mt-4 h-[76vh] min-h-[580px] w-full overflow-hidden rounded-[32px] border border-amber-900/20 shadow-museum flex flex-col"
       style={{ background: "linear-gradient(160deg,#fdf6e3 0%,#f5e6c8 60%,#e8d5a3 100%)" }}
     >
       {/* Parchment texture overlay */}

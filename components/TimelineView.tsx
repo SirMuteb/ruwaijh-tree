@@ -13,7 +13,7 @@ export function TimelineView() {
   });
 
   return (
-    <section className="mx-auto mt-4 h-[72vh] min-h-[560px] w-[min(1520px,calc(100vw-24px))] overflow-auto rounded-[32px] border border-white/60 bg-white/35 p-6 shadow-museum">
+    <section className="mx-auto mt-4 h-[72vh] min-h-[560px] w-full overflow-auto rounded-[32px] border border-white/60 bg-white/35 p-6 shadow-museum">
       <div className="flex min-w-[1200px] gap-5" dir="rtl">
         {[...levels.entries()].sort((a, b) => a[0] - b[0]).map(([generation, members]) => (
           <motion.div

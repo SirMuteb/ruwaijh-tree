@@ -19,8 +19,8 @@ interface LineageState {
 }
 
 export const useLineageStore = create<LineageState>((set) => ({
-  selectedId: "عباد",
-  focusedId: "عباد",
+  selectedId: "رويجح_وقيتان_عايد_سالم_محمد_عبيد_عباد",
+  focusedId: "رويجح_وقيتان_عايد_سالم_محمد_عبيد_عباد",
   query: "",
   viewMode: "tree",
   highlightMode: "none",
