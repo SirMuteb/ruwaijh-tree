@@ -24,12 +24,23 @@ export function WelcomeModal() {
     }
   }, [step, isOpen]);
 
+  const handleInteraction = (e?: React.MouseEvent) => {
+    if (e) {
+      e.stopPropagation();
+    }
+    if (step === 1) {
+      setStep(2);
+    } else {
+      setIsOpen(false);
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
     <AnimatePresence mode="wait">
       <div
-        onClick={() => setIsOpen(false)}
+        onClick={() => handleInteraction()}
         className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal/50 p-4 backdrop-blur-md cursor-pointer select-none"
         dir="rtl"
         role="button"
@@ -47,9 +58,7 @@ export function WelcomeModal() {
             fontFamily: "var(--font-thmanyah-sans), sans-serif"
           }}
           onClick={(e) => {
-            // Click inside also closes, as requested
-            e.stopPropagation();
-            setIsOpen(false);
+            handleInteraction(e);
           }}
         >
           {step === 1 ? (

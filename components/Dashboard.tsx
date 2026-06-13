@@ -11,7 +11,7 @@ export function Dashboard() {
   const inView = useInView(ref, { once: true, margin: "-120px" });
 
   return (
-    <section ref={ref} className="mx-auto my-8 grid w-[min(1520px,calc(100vw-24px))] gap-4 lg:grid-cols-[1.2fr_.8fr]">
+    <section ref={ref} className="w-full my-4 grid gap-4 lg:grid-cols-[1.2fr_.8fr]">
       <div className="museum-glass rounded-[32px] p-6">
         <div className="flex items-center gap-2 text-emeraldDeep">
           <BarChart3 className="h-5 w-5 text-goldRich" />

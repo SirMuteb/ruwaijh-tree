@@ -24,20 +24,25 @@ export default function Home() {
       <TopBar onReset={() => actions.current.reset()} onFit={() => actions.current.fit()} />
       
       <div className="mx-auto my-6 grid w-[min(1520px,calc(100vw-24px))] gap-6 lg:grid-cols-[1fr_390px] items-start">
-        {/* Right side (Desktop) / Top side (Mobile) */}
-        <div className="flex flex-col gap-4 min-w-0">
-          {/* Website Goal Phrase */}
-          <div className="museum-glass border border-emeraldDeep/10 rounded-[28px] p-5 text-right bg-white/65 shadow-sm">
-            <p className="text-sm md:text-base font-bold text-emeraldDeep leading-7" style={{ fontFamily: "var(--font-thmanyah-sans), sans-serif" }}>
-              من جذورٍ راسخة في عمق الماضي إلى فروعٍ تمتد نحو المستقبل، توحدنا هذه الشجرة الرقمية لحفظ الأنساب وتوثيق التاريخ العائلي للأجيال القادمة.
-            </p>
-          </div>
+        {/* Website Goal Phrase */}
+        <div className="lg:col-start-1 lg:row-start-1 museum-glass border border-emeraldDeep/10 rounded-[28px] p-5 text-right bg-white/65 shadow-sm">
+          <p className="text-sm md:text-base font-bold text-emeraldDeep leading-7" style={{ fontFamily: "var(--font-thmanyah-sans), sans-serif" }}>
+            من جذورٍ راسخة في عمق الماضي إلى فروعٍ تمتد نحو المستقبل، توحدنا هذه الشجرة الرقمية لحفظ الأنساب وتوثيق التاريخ العائلي للأجيال القادمة.
+          </p>
+        </div>
+
+        {/* Tree / Timeline View */}
+        <div className="lg:col-start-1 lg:row-start-2 min-w-0">
           {viewMode === "tree" ? <LineageTree registerActions={registerActions} /> : <TimelineView />}
         </div>
 
-        {/* Left side (Desktop) / Bottom side (Mobile) */}
-        <div className="flex flex-col gap-6 w-full max-w-[390px] lg:w-[390px] justify-self-center lg:justify-self-start">
+        {/* Left side Sticky Sidebar (Desktop) / Second Item (Mobile) */}
+        <div className="lg:col-start-2 lg:row-start-1 lg:row-span-3 lg:sticky lg:top-6 w-full max-w-[390px] lg:w-[390px] justify-self-center lg:justify-self-start">
           <DetailPanel />
+        </div>
+
+        {/* Dashboard under the Tree View */}
+        <div className="lg:col-start-1 lg:row-start-3 w-full">
           <Dashboard />
         </div>
       </div>
