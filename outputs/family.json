@@ -1,0 +1,2268 @@
+{
+  "people": [
+    {
+      "id": "p-abbad",
+      "name": "????",
+      "fatherId": null,
+      "children": [
+        "p-111"
+      ],
+      "isDeceased": true,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "note": "Central ancestral label assembled from split PDF text",
+        "x": 945,
+        "y": 98,
+        "pdfItems": [
+          112,
+          113,
+          114
+        ]
+      },
+      "generation": 0
+    },
+    {
+      "id": "p-111",
+      "name": "????",
+      "fatherId": "p-abbad",
+      "children": [
+        "p-110"
+      ],
+      "isDeceased": true,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 900.5,
+        "y": 155.8,
+        "pdfItems": [
+          111
+        ]
+      },
+      "generation": 1
+    },
+    {
+      "id": "p-110",
+      "name": "????",
+      "fatherId": "p-111",
+      "children": [
+        "p-109"
+      ],
+      "isDeceased": true,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 915.7,
+        "y": 222.8,
+        "pdfItems": [
+          110
+        ]
+      },
+      "generation": 2
+    },
+    {
+      "id": "p-109",
+      "name": "????",
+      "fatherId": "p-110",
+      "children": [
+        "p-108"
+      ],
+      "isDeceased": true,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 921.5,
+        "y": 289.8,
+        "pdfItems": [
+          109
+        ]
+      },
+      "generation": 3
+    },
+    {
+      "id": "p-108",
+      "name": "????",
+      "fatherId": "p-109",
+      "children": [
+        "p-107"
+      ],
+      "isDeceased": true,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 930.2,
+        "y": 356.8,
+        "pdfItems": [
+          108
+        ]
+      },
+      "generation": 4
+    },
+    {
+      "id": "p-107",
+      "name": "??????",
+      "fatherId": "p-108",
+      "children": [
+        "p-3",
+        "p-2"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 945.2,
+        "y": 423.8,
+        "pdfItems": [
+          107
+        ]
+      },
+      "generation": 5
+    },
+    {
+      "id": "p-2",
+      "name": "شفاي",
+      "fatherId": "p-107",
+      "children": [
+        "p-6",
+        "p-139"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1065.7,
+        "y": 806.5,
+        "pdfItems": [
+          2
+        ]
+      },
+      "generation": 6
+    },
+    {
+      "id": "p-3",
+      "name": "محمد",
+      "fatherId": "p-107",
+      "children": [
+        "p-36",
+        "p-135"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 752.3,
+        "y": 889.8,
+        "pdfItems": [
+          3
+        ]
+      },
+      "generation": 6
+    },
+    {
+      "id": "p-139",
+      "name": "غازي",
+      "fatherId": "p-2",
+      "children": [
+        "p-138",
+        "p-140",
+        "p-141",
+        "p-103"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1225.5,
+        "y": 934.6,
+        "pdfItems": [
+          139
+        ]
+      },
+      "generation": 7
+    },
+    {
+      "id": "p-103",
+      "name": "يزيد",
+      "fatherId": "p-139",
+      "children": [
+        "p-8",
+        "p-102"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1656.8,
+        "y": 951.8,
+        "pdfItems": [
+          103
+        ]
+      },
+      "generation": 8
+    },
+    {
+      "id": "p-36",
+      "name": "متعبحسين",
+      "fatherId": "p-3",
+      "children": [
+        "p-37",
+        "p-35"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 222.2,
+        "y": 981.3,
+        "pdfItems": [
+          36
+        ]
+      },
+      "generation": 7
+    },
+    {
+      "id": "p-135",
+      "name": "مسند",
+      "fatherId": "p-3",
+      "children": [
+        "p-32",
+        "p-43",
+        "p-136"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 590.3,
+        "y": 994.2,
+        "pdfItems": [
+          135
+        ]
+      },
+      "generation": 7
+    },
+    {
+      "id": "p-141",
+      "name": "هجاج",
+      "fatherId": "p-139",
+      "children": [
+        "p-142",
+        "p-7"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1386.5,
+        "y": 1028.5,
+        "pdfItems": [
+          141
+        ]
+      },
+      "generation": 8
+    },
+    {
+      "id": "p-32",
+      "name": "محمد",
+      "fatherId": "p-135",
+      "children": [
+        "p-33"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 471.5,
+        "y": 1029.6,
+        "pdfItems": [
+          32
+        ]
+      },
+      "generation": 8
+    },
+    {
+      "id": "p-102",
+      "name": "بندر",
+      "fatherId": "p-103",
+      "children": [
+        "p-101"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1693.2,
+        "y": 1032.6,
+        "pdfItems": [
+          102
+        ]
+      },
+      "generation": 9
+    },
+    {
+      "id": "p-138",
+      "name": "مزيد",
+      "fatherId": "p-139",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1152.8,
+        "y": 1050.2,
+        "pdfItems": [
+          138
+        ]
+      },
+      "generation": 8
+    },
+    {
+      "id": "p-7",
+      "name": "غازي",
+      "fatherId": "p-141",
+      "children": [
+        "p-10"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1529.3,
+        "y": 1065.3,
+        "pdfItems": [
+          7
+        ]
+      },
+      "generation": 9
+    },
+    {
+      "id": "p-35",
+      "name": "أحمدعبداالله",
+      "fatherId": "p-36",
+      "children": [
+        "p-34"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 261.9,
+        "y": 1100.2,
+        "pdfItems": [
+          35
+        ]
+      },
+      "generation": 8
+    },
+    {
+      "id": "p-8",
+      "name": "مزيد",
+      "fatherId": "p-103",
+      "children": [
+        "p-100"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1659.3,
+        "y": 1105.9,
+        "pdfItems": [
+          8
+        ]
+      },
+      "generation": 9
+    },
+    {
+      "id": "p-136",
+      "name": "متعب",
+      "fatherId": "p-135",
+      "children": [
+        "p-45"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 639.4,
+        "y": 1134.8,
+        "pdfItems": [
+          136
+        ]
+      },
+      "generation": 8
+    },
+    {
+      "id": "p-33",
+      "name": "عايد",
+      "fatherId": "p-32",
+      "children": [
+        "p-137",
+        "p-106"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 421.4,
+        "y": 1152.0,
+        "pdfItems": [
+          33
+        ]
+      },
+      "generation": 9
+    },
+    {
+      "id": "p-10",
+      "name": "بندر",
+      "fatherId": "p-7",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1524.5,
+        "y": 1159.4,
+        "pdfItems": [
+          10
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-101",
+      "name": "فهد",
+      "fatherId": "p-102",
+      "children": [
+        "p-99"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1739.0,
+        "y": 1160.6,
+        "pdfItems": [
+          101
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-140",
+      "name": "بجـاد",
+      "fatherId": "p-139",
+      "children": [
+        "p-11"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1211.2,
+        "y": 1171.4,
+        "pdfItems": [
+          140
+        ]
+      },
+      "generation": 8
+    },
+    {
+      "id": "p-142",
+      "name": "مزيد",
+      "fatherId": "p-141",
+      "children": [
+        "p-91"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1382.0,
+        "y": 1177.6,
+        "pdfItems": [
+          142
+        ]
+      },
+      "generation": 9
+    },
+    {
+      "id": "p-34",
+      "name": "فايز",
+      "fatherId": "p-35",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 302.9,
+        "y": 1178.0,
+        "pdfItems": [
+          34
+        ]
+      },
+      "generation": 9
+    },
+    {
+      "id": "p-100",
+      "name": "هجاج",
+      "fatherId": "p-8",
+      "children": [
+        "p-92",
+        "p-93"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1662.1,
+        "y": 1208.9,
+        "pdfItems": [
+          100
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-37",
+      "name": "متعب",
+      "fatherId": "p-36",
+      "children": [
+        "p-38"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 177.9,
+        "y": 1209.9,
+        "pdfItems": [
+          37
+        ]
+      },
+      "generation": 8
+    },
+    {
+      "id": "p-6",
+      "name": ")شافـي(",
+      "fatherId": "p-2",
+      "children": [
+        "p-5",
+        "p-143"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 998.0,
+        "y": 1229.3,
+        "pdfItems": [
+          6
+        ]
+      },
+      "generation": 7
+    },
+    {
+      "id": "p-137",
+      "name": "سعود",
+      "fatherId": "p-33",
+      "children": [
+        "p-105"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 388.2,
+        "y": 1256.5,
+        "pdfItems": [
+          137
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-11",
+      "name": "مقحم",
+      "fatherId": "p-140",
+      "children": [
+        "p-90"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1250.7,
+        "y": 1264.8,
+        "pdfItems": [
+          11
+        ]
+      },
+      "generation": 9
+    },
+    {
+      "id": "p-5",
+      "name": "محرق",
+      "fatherId": "p-6",
+      "children": [
+        "p-54"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 976.9,
+        "y": 1266.3,
+        "pdfItems": [
+          5
+        ]
+      },
+      "generation": 8
+    },
+    {
+      "id": "p-99",
+      "name": "هايف",
+      "fatherId": "p-101",
+      "children": [
+        "p-94"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1714.5,
+        "y": 1272.3,
+        "pdfItems": [
+          99
+        ]
+      },
+      "generation": 11
+    },
+    {
+      "id": "p-92",
+      "name": "ماجد",
+      "fatherId": "p-100",
+      "children": [
+        "p-17",
+        "p-96"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1587.4,
+        "y": 1297.8,
+        "pdfItems": [
+          92
+        ]
+      },
+      "generation": 11
+    },
+    {
+      "id": "p-38",
+      "name": "محمدمنيف",
+      "fatherId": "p-37",
+      "children": [
+        "p-39"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 165.1,
+        "y": 1304.9,
+        "pdfItems": [
+          38
+        ]
+      },
+      "generation": 9
+    },
+    {
+      "id": "p-45",
+      "name": "عيد",
+      "fatherId": "p-136",
+      "children": [
+        "p-44",
+        "p-4"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 699.1,
+        "y": 1323.7,
+        "pdfItems": [
+          45
+        ]
+      },
+      "generation": 9
+    },
+    {
+      "id": "p-93",
+      "name": "غازي",
+      "fatherId": "p-100",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1657.5,
+        "y": 1335.6,
+        "pdfItems": [
+          93
+        ]
+      },
+      "generation": 11
+    },
+    {
+      "id": "p-4",
+      "name": "عالي",
+      "fatherId": "p-45",
+      "children": [
+        "p-9"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 823.5,
+        "y": 1342.9,
+        "pdfItems": [
+          4
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-91",
+      "name": "بجاد",
+      "fatherId": "p-142",
+      "children": [
+        "p-115"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1361.0,
+        "y": 1349.4,
+        "pdfItems": [
+          91
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-43",
+      "name": "منيف",
+      "fatherId": "p-135",
+      "children": [
+        "p-42"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 593.4,
+        "y": 1355.0,
+        "pdfItems": [
+          43
+        ]
+      },
+      "generation": 8
+    },
+    {
+      "id": "p-17",
+      "name": "فهد",
+      "fatherId": "p-92",
+      "children": [
+        "p-18"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1544.4,
+        "y": 1375.4,
+        "pdfItems": [
+          17
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-105",
+      "name": "نايف",
+      "fatherId": "p-137",
+      "children": [
+        "p-41"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 350.8,
+        "y": 1375.7,
+        "pdfItems": [
+          105
+        ]
+      },
+      "generation": 11
+    },
+    {
+      "id": "p-39",
+      "name": "سعود",
+      "fatherId": "p-38",
+      "children": [
+        "p-40"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 163.8,
+        "y": 1398.3,
+        "pdfItems": [
+          39
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-44",
+      "name": "سعد",
+      "fatherId": "p-45",
+      "children": [
+        "p-144"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 683.7,
+        "y": 1405.8,
+        "pdfItems": [
+          44
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-94",
+      "name": "مزيد",
+      "fatherId": "p-99",
+      "children": [
+        "p-95"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1722.7,
+        "y": 1420.4,
+        "pdfItems": [
+          94
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-106",
+      "name": "محمد",
+      "fatherId": "p-33",
+      "children": [
+        "p-46"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 448.7,
+        "y": 1423.6,
+        "pdfItems": [
+          106
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-90",
+      "name": "سطاممحمد",
+      "fatherId": "p-11",
+      "children": [
+        "p-89"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1246.8,
+        "y": 1436.7,
+        "pdfItems": [
+          90
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-18",
+      "name": "علي",
+      "fatherId": "p-17",
+      "children": [
+        "p-86"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1498.0,
+        "y": 1448.4,
+        "pdfItems": [
+          18
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-42",
+      "name": "فايز",
+      "fatherId": "p-43",
+      "children": [
+        "p-145"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 565.0,
+        "y": 1467.6,
+        "pdfItems": [
+          42
+        ]
+      },
+      "generation": 9
+    },
+    {
+      "id": "p-115",
+      "name": "عبداالله",
+      "fatherId": "p-91",
+      "children": [
+        "p-20",
+        "p-87"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1405.8,
+        "y": 1498.2,
+        "pdfItems": [
+          115
+        ]
+      },
+      "generation": 11
+    },
+    {
+      "id": "p-40",
+      "name": "محمدمتعب",
+      "fatherId": "p-39",
+      "children": [
+        "p-48"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 162.4,
+        "y": 1502.5,
+        "pdfItems": [
+          40
+        ]
+      },
+      "generation": 11
+    },
+    {
+      "id": "p-95",
+      "name": "حسنسيف",
+      "fatherId": "p-94",
+      "children": [
+        "p-98"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1731.4,
+        "y": 1515.9,
+        "pdfItems": [
+          95
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-41",
+      "name": "نايف",
+      "fatherId": "p-105",
+      "children": [
+        "p-47"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 324.7,
+        "y": 1524.7,
+        "pdfItems": [
+          41
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-143",
+      "name": "شارع",
+      "fatherId": "p-6",
+      "children": [
+        "p-31"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1053.9,
+        "y": 1528.9,
+        "pdfItems": [
+          143
+        ]
+      },
+      "generation": 8
+    },
+    {
+      "id": "p-144",
+      "name": "دغيم",
+      "fatherId": "p-44",
+      "children": [
+        "p-53"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 719.3,
+        "y": 1537.2,
+        "pdfItems": [
+          144
+        ]
+      },
+      "generation": 11
+    },
+    {
+      "id": "p-96",
+      "name": "فهد",
+      "fatherId": "p-92",
+      "children": [
+        "p-97"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1605.2,
+        "y": 1549.0,
+        "pdfItems": [
+          96
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-89",
+      "name": "علي",
+      "fatherId": "p-90",
+      "children": [
+        "p-147",
+        "p-88"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1264.3,
+        "y": 1562.6,
+        "pdfItems": [
+          89
+        ]
+      },
+      "generation": 11
+    },
+    {
+      "id": "p-46",
+      "name": "عمر",
+      "fatherId": "p-106",
+      "children": [
+        "p-12",
+        "p-13"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 432.1,
+        "y": 1566.9,
+        "pdfItems": [
+          46
+        ]
+      },
+      "generation": 11
+    },
+    {
+      "id": "p-87",
+      "name": "عبدالعزيز",
+      "fatherId": "p-115",
+      "children": [
+        "p-19"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1446.7,
+        "y": 1583.6,
+        "pdfItems": [
+          87
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-54",
+      "name": "ناصر",
+      "fatherId": "p-5",
+      "children": [
+        "p-55"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 914.6,
+        "y": 1612.1,
+        "pdfItems": [
+          54
+        ]
+      },
+      "generation": 9
+    },
+    {
+      "id": "p-47",
+      "name": "محمدفايز",
+      "fatherId": "p-41",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 343.7,
+        "y": 1612.2,
+        "pdfItems": [
+          47
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-98",
+      "name": "عبداالله",
+      "fatherId": "p-95",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1684.3,
+        "y": 1619.7,
+        "pdfItems": [
+          98
+        ]
+      },
+      "generation": 14
+    },
+    {
+      "id": "p-88",
+      "name": "محمد",
+      "fatherId": "p-89",
+      "children": [
+        "p-21"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1322.1,
+        "y": 1620.4,
+        "pdfItems": [
+          88
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-86",
+      "name": "بدر",
+      "fatherId": "p-18",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1509.5,
+        "y": 1642.1,
+        "pdfItems": [
+          86
+        ]
+      },
+      "generation": 14
+    },
+    {
+      "id": "p-145",
+      "name": "هويدي",
+      "fatherId": "p-42",
+      "children": [
+        "p-104"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 567.1,
+        "y": 1655.8,
+        "pdfItems": [
+          145
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-97",
+      "name": "أحمد",
+      "fatherId": "p-96",
+      "children": [
+        "p-83",
+        "p-85"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1589.5,
+        "y": 1656.4,
+        "pdfItems": [
+          97
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-48",
+      "name": "عبدالهادي",
+      "fatherId": "p-40",
+      "children": [
+        "p-49"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 197.6,
+        "y": 1664.7,
+        "pdfItems": [
+          48
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-9",
+      "name": "محمد",
+      "fatherId": "p-4",
+      "children": [
+        "p-29"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 827.9,
+        "y": 1666.4,
+        "pdfItems": [
+          9
+        ]
+      },
+      "generation": 11
+    },
+    {
+      "id": "p-12",
+      "name": "دغيم",
+      "fatherId": "p-46",
+      "children": [
+        "p-62"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 398.5,
+        "y": 1688.3,
+        "pdfItems": [
+          12
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-147",
+      "name": "مقحم",
+      "fatherId": "p-89",
+      "children": [
+        "p-148",
+        "p-22"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1211.3,
+        "y": 1707.4,
+        "pdfItems": [
+          147
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-53",
+      "name": "هايف",
+      "fatherId": "p-144",
+      "children": [
+        "p-56"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 743.4,
+        "y": 1713.6,
+        "pdfItems": [
+          53
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-55",
+      "name": "فلاح",
+      "fatherId": "p-54",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 914.5,
+        "y": 1714.0,
+        "pdfItems": [
+          55
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-20",
+      "name": "عبدالرحمن",
+      "fatherId": "p-115",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1380.4,
+        "y": 1726.7,
+        "pdfItems": [
+          20
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-85",
+      "name": "خالدناجي",
+      "fatherId": "p-97",
+      "children": [
+        "p-84"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1640.3,
+        "y": 1727.5,
+        "pdfItems": [
+          85
+        ]
+      },
+      "generation": 14
+    },
+    {
+      "id": "p-49",
+      "name": "وليد",
+      "fatherId": "p-48",
+      "children": [
+        "p-50"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 259.9,
+        "y": 1753.3,
+        "pdfItems": [
+          49
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-148",
+      "name": "هايففلاح",
+      "fatherId": "p-147",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1119.1,
+        "y": 1766.2,
+        "pdfItems": [
+          148
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-13",
+      "name": "عالي",
+      "fatherId": "p-46",
+      "children": [
+        "p-51"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 435.9,
+        "y": 1768.8,
+        "pdfItems": [
+          13
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-104",
+      "name": "عالـي",
+      "fatherId": "p-145",
+      "children": [
+        "p-146"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 587.9,
+        "y": 1806.4,
+        "pdfItems": [
+          104
+        ]
+      },
+      "generation": 11
+    },
+    {
+      "id": "p-19",
+      "name": "خالد",
+      "fatherId": "p-87",
+      "children": [
+        "p-149"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1468.7,
+        "y": 1806.6,
+        "pdfItems": [
+          19
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-29",
+      "name": "شافي",
+      "fatherId": "p-9",
+      "children": [
+        "p-30"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 847.8,
+        "y": 1814.0,
+        "pdfItems": [
+          29
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-84",
+      "name": "فادي",
+      "fatherId": "p-85",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1636.1,
+        "y": 1816.5,
+        "pdfItems": [
+          84
+        ]
+      },
+      "generation": 15
+    },
+    {
+      "id": "p-50",
+      "name": "عبداالله",
+      "fatherId": "p-49",
+      "children": [
+        "p-52"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 280.5,
+        "y": 1820.7,
+        "pdfItems": [
+          50
+        ]
+      },
+      "generation": 14
+    },
+    {
+      "id": "p-51",
+      "name": "عبداالله",
+      "fatherId": "p-13",
+      "children": [
+        "p-61",
+        "p-14"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 449.9,
+        "y": 1851.9,
+        "pdfItems": [
+          51
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-83",
+      "name": "وليد",
+      "fatherId": "p-97",
+      "children": [
+        "p-82"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1577.5,
+        "y": 1871.5,
+        "pdfItems": [
+          83
+        ]
+      },
+      "generation": 14
+    },
+    {
+      "id": "p-21",
+      "name": "محمد",
+      "fatherId": "p-88",
+      "children": [
+        "p-78"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1321.0,
+        "y": 1876.7,
+        "pdfItems": [
+          21
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-149",
+      "name": "هايف",
+      "fatherId": "p-19",
+      "children": [
+        "p-76",
+        "p-81"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1425.1,
+        "y": 1876.9,
+        "pdfItems": [
+          149
+        ]
+      },
+      "generation": 14
+    },
+    {
+      "id": "p-146",
+      "name": "محمد",
+      "fatherId": "p-104",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 676.3,
+        "y": 1889.9,
+        "pdfItems": [
+          146
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-52",
+      "name": "عبدالعزيز",
+      "fatherId": "p-50",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 327.8,
+        "y": 1902.4,
+        "pdfItems": [
+          52
+        ]
+      },
+      "generation": 15
+    },
+    {
+      "id": "p-30",
+      "name": "هايف",
+      "fatherId": "p-29",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 848.1,
+        "y": 1908.5,
+        "pdfItems": [
+          30
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-22",
+      "name": "نايف",
+      "fatherId": "p-147",
+      "children": [
+        "p-23"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1201.1,
+        "y": 1915.4,
+        "pdfItems": [
+          22
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-82",
+      "name": "سلطان",
+      "fatherId": "p-83",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1531.3,
+        "y": 1930.9,
+        "pdfItems": [
+          82
+        ]
+      },
+      "generation": 15
+    },
+    {
+      "id": "p-14",
+      "name": "دغيم",
+      "fatherId": "p-51",
+      "children": [
+        "p-60",
+        "p-15"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 512.0,
+        "y": 1931.2,
+        "pdfItems": [
+          14
+        ]
+      },
+      "generation": 14
+    },
+    {
+      "id": "p-31",
+      "name": "عبداالله",
+      "fatherId": "p-143",
+      "children": [
+        "p-66",
+        "p-27"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1021.3,
+        "y": 1932.0,
+        "pdfItems": [
+          31
+        ]
+      },
+      "generation": 9
+    },
+    {
+      "id": "p-81",
+      "name": "غيث",
+      "fatherId": "p-149",
+      "children": [
+        "p-79"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1455.5,
+        "y": 1961.3,
+        "pdfItems": [
+          81
+        ]
+      },
+      "generation": 15
+    },
+    {
+      "id": "p-56",
+      "name": "طلال",
+      "fatherId": "p-53",
+      "children": [
+        "p-58",
+        "p-57"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 746.1,
+        "y": 1968.1,
+        "pdfItems": [
+          56
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-62",
+      "name": "عالي",
+      "fatherId": "p-12",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 393.1,
+        "y": 1978.3,
+        "pdfItems": [
+          62
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-78",
+      "name": "بندر",
+      "fatherId": "p-21",
+      "children": [
+        "p-77",
+        "p-74"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1310.1,
+        "y": 1979.9,
+        "pdfItems": [
+          78
+        ]
+      },
+      "generation": 14
+    },
+    {
+      "id": "p-66",
+      "name": "فلاح",
+      "fatherId": "p-31",
+      "children": [
+        "p-65"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 941.9,
+        "y": 1995.5,
+        "pdfItems": [
+          66
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-15",
+      "name": "محمد",
+      "fatherId": "p-14",
+      "children": [
+        "p-16"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 554.4,
+        "y": 2013.1,
+        "pdfItems": [
+          15
+        ]
+      },
+      "generation": 15
+    },
+    {
+      "id": "p-79",
+      "name": "جراح",
+      "fatherId": "p-81",
+      "children": [
+        "p-80"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1484.7,
+        "y": 2032.5,
+        "pdfItems": [
+          79
+        ]
+      },
+      "generation": 16
+    },
+    {
+      "id": "p-27",
+      "name": "بندر",
+      "fatherId": "p-31",
+      "children": [
+        "p-70"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1008.9,
+        "y": 2040.7,
+        "pdfItems": [
+          27
+        ]
+      },
+      "generation": 10
+    },
+    {
+      "id": "p-57",
+      "name": "راكان",
+      "fatherId": "p-56",
+      "children": [
+        "p-28"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 784.4,
+        "y": 2042.0,
+        "pdfItems": [
+          57
+        ]
+      },
+      "generation": 14
+    },
+    {
+      "id": "p-61",
+      "name": "محمد",
+      "fatherId": "p-51",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 445.0,
+        "y": 2053.9,
+        "pdfItems": [
+          61
+        ]
+      },
+      "generation": 14
+    },
+    {
+      "id": "p-23",
+      "name": "صالح",
+      "fatherId": "p-22",
+      "children": [
+        "p-24",
+        "p-73"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1182.0,
+        "y": 2057.2,
+        "pdfItems": [
+          23
+        ]
+      },
+      "generation": 14
+    },
+    {
+      "id": "p-77",
+      "name": "عليمحمد",
+      "fatherId": "p-78",
+      "children": [
+        "p-72"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1260.4,
+        "y": 2064.3,
+        "pdfItems": [
+          77
+        ]
+      },
+      "generation": 15
+    },
+    {
+      "id": "p-16",
+      "name": "شهيل",
+      "fatherId": "p-15",
+      "children": [
+        "p-59"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 618.1,
+        "y": 2074.0,
+        "pdfItems": [
+          16
+        ]
+      },
+      "generation": 16
+    },
+    {
+      "id": "p-65",
+      "name": "فهد",
+      "fatherId": "p-66",
+      "children": [
+        "p-67",
+        "p-25"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 922.1,
+        "y": 2092.9,
+        "pdfItems": [
+          65
+        ]
+      },
+      "generation": 11
+    },
+    {
+      "id": "p-60",
+      "name": "نايف",
+      "fatherId": "p-14",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 514.7,
+        "y": 2107.5,
+        "pdfItems": [
+          60
+        ]
+      },
+      "generation": 15
+    },
+    {
+      "id": "p-80",
+      "name": "مقحم",
+      "fatherId": "p-79",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1484.7,
+        "y": 2111.7,
+        "pdfItems": [
+          80
+        ]
+      },
+      "generation": 17
+    },
+    {
+      "id": "p-24",
+      "name": "بدر",
+      "fatherId": "p-23",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1121.4,
+        "y": 2118.1,
+        "pdfItems": [
+          24
+        ]
+      },
+      "generation": 15
+    },
+    {
+      "id": "p-58",
+      "name": "عالي",
+      "fatherId": "p-56",
+      "children": [
+        "p-64"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 734.0,
+        "y": 2129.1,
+        "pdfItems": [
+          58
+        ]
+      },
+      "generation": 14
+    },
+    {
+      "id": "p-28",
+      "name": "ماجد",
+      "fatherId": "p-57",
+      "children": [
+        "p-68"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 816.7,
+        "y": 2129.4,
+        "pdfItems": [
+          28
+        ]
+      },
+      "generation": 15
+    },
+    {
+      "id": "p-76",
+      "name": "فهد",
+      "fatherId": "p-149",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1412.1,
+        "y": 2136.6,
+        "pdfItems": [
+          76
+        ]
+      },
+      "generation": 15
+    },
+    {
+      "id": "p-74",
+      "name": "فلاح",
+      "fatherId": "p-78",
+      "children": [
+        "p-75"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1313.7,
+        "y": 2147.2,
+        "pdfItems": [
+          74
+        ]
+      },
+      "generation": 15
+    },
+    {
+      "id": "p-59",
+      "name": "محمدفيصل",
+      "fatherId": "p-16",
+      "children": [
+        "p-63"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 656.9,
+        "y": 2159.4,
+        "pdfItems": [
+          59
+        ]
+      },
+      "generation": 17
+    },
+    {
+      "id": "p-25",
+      "name": "محمد",
+      "fatherId": "p-65",
+      "children": [
+        "p-26"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 942.0,
+        "y": 2170.3,
+        "pdfItems": [
+          25
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-73",
+      "name": "محمد",
+      "fatherId": "p-23",
+      "children": [
+        "p-71"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1169.8,
+        "y": 2206.4,
+        "pdfItems": [
+          73
+        ]
+      },
+      "generation": 15
+    },
+    {
+      "id": "p-70",
+      "name": "عبداالله",
+      "fatherId": "p-27",
+      "children": [
+        "p-69"
+      ],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1052.1,
+        "y": 2219.5,
+        "pdfItems": [
+          70
+        ]
+      },
+      "generation": 11
+    },
+    {
+      "id": "p-75",
+      "name": "نايف",
+      "fatherId": "p-74",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1315.8,
+        "y": 2228.8,
+        "pdfItems": [
+          75
+        ]
+      },
+      "generation": 16
+    },
+    {
+      "id": "p-68",
+      "name": "فارس",
+      "fatherId": "p-28",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 823.3,
+        "y": 2230.3,
+        "pdfItems": [
+          68
+        ]
+      },
+      "generation": 16
+    },
+    {
+      "id": "p-63",
+      "name": "عبدالعزيز",
+      "fatherId": "p-59",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 678.6,
+        "y": 2254.8,
+        "pdfItems": [
+          63
+        ]
+      },
+      "generation": 18
+    },
+    {
+      "id": "p-26",
+      "name": "هايف",
+      "fatherId": "p-25",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 967.3,
+        "y": 2262.1,
+        "pdfItems": [
+          26
+        ]
+      },
+      "generation": 13
+    },
+    {
+      "id": "p-72",
+      "name": "بدر",
+      "fatherId": "p-77",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1243.9,
+        "y": 2266.8,
+        "pdfItems": [
+          72
+        ]
+      },
+      "generation": 16
+    },
+    {
+      "id": "p-64",
+      "name": "نايففيصل",
+      "fatherId": "p-58",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 760.6,
+        "y": 2295.1,
+        "pdfItems": [
+          64
+        ]
+      },
+      "generation": 15
+    },
+    {
+      "id": "p-69",
+      "name": "محمد",
+      "fatherId": "p-70",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1067.0,
+        "y": 2300.5,
+        "pdfItems": [
+          69
+        ]
+      },
+      "generation": 12
+    },
+    {
+      "id": "p-71",
+      "name": "بندر",
+      "fatherId": "p-73",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 1147.0,
+        "y": 2304.5,
+        "pdfItems": [
+          71
+        ]
+      },
+      "generation": 16
+    },
+    {
+      "id": "p-67",
+      "name": "بدربندر",
+      "fatherId": "p-65",
+      "children": [],
+      "isDeceased": false,
+      "source": {
+        "pdf": "_???? ???????.pdf",
+        "x": 915.7,
+        "y": 2349.8,
+        "pdfItems": [
+          67
+        ]
+      },
+      "generation": 12
+    }
+  ],
+  "metadata": {
+    "sourcePdf": "C:/Users/muteb/Downloads/Telegram Desktop/_???? ???????.pdf",
+    "extraction": "Text coordinates extracted with pypdf; central trunk assembled from split glyph labels; father-son links reconstructed from PDF layout proximity only. No spouse/mother/location/date fields were added.",
+    "personCount": 127,
+    "generatedAt": "2026-06-10"
+  }
+}
