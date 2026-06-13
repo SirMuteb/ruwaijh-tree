@@ -122,6 +122,17 @@ export function getLineageName(personId: string, limit = 4): string {
   return names.join(" بن ");
 }
 
+export function getFullLineageName(personId: string): string {
+  const names: string[] = [];
+  let cursor = peopleById.get(personId);
+  while (cursor) {
+    names.push(cursor.name);
+    if (!cursor.fatherId) break;
+    cursor = peopleById.get(cursor.fatherId);
+  }
+  return names.join(" بن ");
+}
+
 export function searchPeople(query: string): Person[] {
   const normalizedQuery = normalizeArabic(query);
   if (!normalizedQuery) return [];

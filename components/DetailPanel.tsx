@@ -1,8 +1,9 @@
 "use client";
 
+import { useMemo } from "react";
 import { motion } from "framer-motion";
 import { GitBranch, HeartHandshake, Landmark, UserRound, UsersRound } from "lucide-react";
-import { getAncestors, getChildren, getDescendants, getFather, peopleById } from "@/lib/family";
+import { getAncestors, getChildren, getDescendants, getFather, peopleById, getLineageName, getFullLineageName } from "@/lib/family";
 import { useLineageStore } from "@/store/useLineageStore";
 import type { HighlightMode } from "@/lib/types";
 
@@ -24,6 +25,13 @@ export function DetailPanel() {
     ? getChildren(father.id).filter((child) => child.id !== person.id)
     : [];
   const descendants = getDescendants(person.id);
+  
+  // Calculate dynamic display name based on highlight mode selection
+  const displayName = useMemo(() => {
+    if (highlightMode === "ancestors") return getLineageName(person.id, 4);
+    if (highlightMode === "direct") return getFullLineageName(person.id);
+    return person.name;
+  }, [person, highlightMode]);
 
   return (
     <motion.aside
@@ -48,7 +56,9 @@ export function DetailPanel() {
               </span>
             )}
           </div>
-          <h2 className="mt-3 text-4xl font-black text-charcoal">{person.name}</h2>
+          <h2 className="mt-3 text-xl md:text-2xl font-black text-charcoal leading-snug" style={{ fontFamily: "var(--font-thmanyah-serif), serif" }}>
+            {displayName}
+          </h2>
         </div>
         {person.isDeceased && <span className="rounded-full border border-charcoal/10 bg-charcoal/7 px-3 py-1 text-xs font-bold text-charcoal/70">متوفى</span>}
       </div>
