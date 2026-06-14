@@ -6,6 +6,8 @@ import { getAncestors, getBranch, getDescendants, getChildren, peopleById, peopl
 import { useLineageStore } from "@/store/useLineageStore";
 import { AnimatePresence, motion } from "framer-motion";
 
+const RUWAYJIH_ID = "رويجح_وقيتان_عايد_سالم_محمد_عبيد_عباد";
+
 type CardSize = "sm" | "md" | "lg";
 
 function formatChildrenCount(count: number): string {
@@ -48,19 +50,27 @@ function TreeNode({
   const isSelected = selectedId === personId;
   const isHighlighted = highlightedIds.has(personId);
   const hasChildren = children.length > 0;
+  const isRootNode = personId === RUWAYJIH_ID;
 
   // Determine sizing styles based on cardSize selection
   const cardPadding = cardSize === "sm" ? "px-3 py-1.5 gap-2" : cardSize === "lg" ? "px-5 py-3.5 gap-4" : "px-4 py-2.5 gap-3";
-  const nameTextSize = cardSize === "sm" ? "text-xs font-bold" : cardSize === "lg" ? "text-lg font-black" : "text-sm font-bold";
+  const nameTextSize = cardSize === "sm" ? "text-[14px] font-bold" : cardSize === "lg" ? "text-[18px] font-black" : "text-[16px] font-bold";
   const badgeTextSize = cardSize === "sm" ? "text-[10px]" : "text-xs";
   const dotSize = cardSize === "sm" ? "h-1.5 w-1.5" : "h-2 w-2";
 
   return (
     <div className="flex flex-col relative" id={`node-${personId}`}>
+      {/* Onboarding Visual Tip for Seniors */}
+      {isRootNode && selectedId === RUWAYJIH_ID && (
+        <div className="absolute top-[-42px] right-4 z-20 bg-goldRich text-charcoal text-[12px] font-black px-3 py-1 rounded-full animate-bounce shadow-md border border-amber-900/10 flex items-center gap-1">
+          <span>انقر هنا للتفاصيل والأبناء </span>
+        </div>
+      )}
+
       <div className="flex items-center relative">
-        {/* CSS horizontal branch elbow connector */}
+        {/* CSS horizontal branch elbow connector (Thicker for Seniors) */}
         {depth > 0 && (
-          <div className="absolute right-[-16px] top-1/2 w-4 h-[1.5px] bg-amber-800/20 pointer-events-none" />
+          <div className="absolute right-[-16px] top-1/2 w-4 h-[2.5px] bg-amber-800/30 pointer-events-none" />
         )}
 
         {/* Card Body */}
@@ -71,6 +81,8 @@ function TreeNode({
             ${cardPadding}
             ${isSelected
               ? "bg-emeraldDeep text-white border-goldRich shadow-gold scale-[1.02]"
+              : isRootNode
+              ? "bg-amber-50/95 border-goldRich/80 text-charcoal hover:bg-amber-100/95 shadow-sm"
               : isHighlighted
               ? "bg-emeraldDeep/10 border-emeraldDeep/30 text-charcoal hover:bg-emeraldDeep/15 hover:border-emeraldDeep/40"
               : "bg-white/75 border-amber-800/10 text-charcoal hover:bg-white hover:border-amber-800/25"
@@ -90,9 +102,14 @@ function TreeNode({
             />
 
             <div className="flex flex-col gap-0.5 text-right">
-              <span className={`tracking-wide ${nameTextSize}`}>
-                {person.name}
-              </span>
+              <div className="flex items-center gap-1.5">
+                <span className={`tracking-wide ${nameTextSize}`}>
+                  {person.name}
+                </span>
+                <span className={`text-[10px] font-bold shrink-0 ${isSelected ? "text-white/60" : "text-emeraldDeep/45"}`}>
+                  تفاصيل ←
+                </span>
+              </div>
               
               <div className="flex flex-wrap items-center gap-1.5 mt-1">
                 <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
@@ -144,7 +161,7 @@ function TreeNode({
 
       {/* Children list nested below with right-border representing the vertical relationship line */}
       {isExpanded && hasChildren && (
-        <div className="mr-5 border-r border-amber-800/15 pr-4 relative flex flex-col gap-3 mt-3">
+        <div className="mr-5 border-r-[2.5px] border-amber-800/25 pr-4 relative flex flex-col gap-3 mt-3">
           {children.map((child, idx) => (
             <TreeNode
               key={child.id}
@@ -165,8 +182,6 @@ function TreeNode({
     </div>
   );
 }
-
-const RUWAYJIH_ID = "رويجح_وقيتان_عايد_سالم_محمد_عبيد_عباد";
 
 export function LineageTree({ registerActions }: { registerActions: (actions: { reset: () => void; fit: () => void }) => void }) {
   const { selectedId, setSelectedId, highlightMode, journeyActive, setJourneyActive } = useLineageStore();
@@ -252,7 +267,7 @@ export function LineageTree({ registerActions }: { registerActions: (actions: { 
         return;
       }
       setSelectedId(point.id);
-    }, 1500);
+    }, 2000); // 2 seconds per slide to give older users time to digest
 
     return () => window.clearInterval(timer);
   }, [journeyActive, setJourneyActive, setSelectedId]);
@@ -320,7 +335,7 @@ export function LineageTree({ registerActions }: { registerActions: (actions: { 
             className="flex items-center justify-center gap-2 rounded-2xl border border-emeraldDeep/10 bg-white/65 px-4 py-2.5 text-[13px] md:text-sm font-bold text-emeraldDeep hover:border-emeraldDeep/30 transition shadow-sm min-h-[44px]"
           >
             <RotateCcw className="h-4 w-4" />
-            طي للجذر
+            أعدني للبداية
           </button>
         </div>
       </div>
@@ -337,7 +352,7 @@ export function LineageTree({ registerActions }: { registerActions: (actions: { 
               رويجح بن وقيتان بن عايد بن سالم بن محمد بن عبيد بن عباد
             </h3>
             <p className="text-xs text-charcoal/60 leading-5">
-              تبدأ الشجرة المعروضة بالأسفل من الابن **رويجح**، وهنا نثبت تسلسل آبائه وأجداده كما ورد في وثائق النسب وصولاً للجد الأكبر **عباد**.
+              تبدأ الشجرة المعروضة بالأسفل من الجد **رويجح**، وهنا نثبت تسلسل آبائه وأجداده كما ورد في وثائق النسب وصولاً للجد الأكبر **عباد**.
             </p>
           </div>
 
@@ -356,16 +371,72 @@ export function LineageTree({ registerActions }: { registerActions: (actions: { 
         </div>
       </div>
 
-      {/* Guided Tour Banner */}
+      {/* Floating Zoom Controls for Seniors (+ / -) */}
+      <div className="absolute bottom-6 right-6 z-20 flex flex-col gap-2 shadow-lg">
+        <button
+          onClick={() => {
+            if (cardSize === "sm") setCardSize("md");
+            else if (cardSize === "md") setCardSize("lg");
+          }}
+          disabled={cardSize === "lg"}
+          className="flex h-11 w-11 items-center justify-center rounded-2xl border border-emeraldDeep/15 bg-white/90 text-emeraldDeep hover:bg-white active:scale-95 disabled:opacity-40 shadow-sm transition"
+          title="تكبير الخط والبطاقات"
+          aria-label="تكبير الخط والبطاقات"
+        >
+          <ZoomIn className="h-5.5 w-5.5" />
+        </button>
+        <button
+          onClick={() => {
+            if (cardSize === "lg") setCardSize("md");
+            else if (cardSize === "md") setCardSize("sm");
+          }}
+          disabled={cardSize === "sm"}
+          className="flex h-11 w-11 items-center justify-center rounded-2xl border border-emeraldDeep/15 bg-white/90 text-emeraldDeep hover:bg-white active:scale-95 disabled:opacity-40 shadow-sm transition"
+          title="تصغير الخط والبطاقات"
+          aria-label="تصغير الخط والبطاقات"
+        >
+          <ZoomOut className="h-5.5 w-5.5" />
+        </button>
+      </div>
+
+      {/* Guided Tour Banner with Manual Controls */}
       <AnimatePresence>
         {journeyActive && (
           <motion.div
-            className="absolute bottom-6 left-6 z-20 rounded-2xl border border-goldRich bg-emeraldDeep px-4 py-3 text-sm font-bold text-white shadow-gold"
+            className="absolute bottom-6 left-6 z-20 rounded-2xl border border-goldRich bg-emeraldDeep px-4 py-3 text-sm font-bold text-white shadow-gold flex flex-col gap-2"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 15 }}
           >
-            رحلة العائلة قيد العرض...
+            <div className="text-right">جولة العائلة قيد العرض...</div>
+            <div className="flex items-center gap-2 mt-1">
+              <button
+                onClick={() => {
+                  setJourneyActive(false); // Switch to manual mode
+                  const ordered = [...people].sort((a, b) => (a.generation ?? 0) - (b.generation ?? 0));
+                  const curIdx = ordered.findIndex((p) => p.id === selectedId);
+                  if (curIdx > 0) {
+                    setSelectedId(ordered[curIdx - 1].id);
+                  }
+                }}
+                className="rounded-lg bg-white/15 px-3 py-1 text-xs font-bold hover:bg-white/25 active:scale-95 transition"
+              >
+                السابق
+              </button>
+              <button
+                onClick={() => {
+                  setJourneyActive(false); // Switch to manual mode
+                  const ordered = [...people].sort((a, b) => (a.generation ?? 0) - (b.generation ?? 0));
+                  const curIdx = ordered.findIndex((p) => p.id === selectedId);
+                  if (curIdx < ordered.length - 1) {
+                    setSelectedId(ordered[curIdx + 1].id);
+                  }
+                }}
+                className="rounded-lg bg-white/15 px-3 py-1 text-xs font-bold hover:bg-white/25 active:scale-95 transition"
+              >
+                التالي
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

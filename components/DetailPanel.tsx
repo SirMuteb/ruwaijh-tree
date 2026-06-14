@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { GitBranch, HeartHandshake, Landmark, UserRound, UsersRound } from "lucide-react";
 import { getAncestors, getChildren, getDescendants, getFather, peopleById, getLineageName, getFullLineageName } from "@/lib/family";
@@ -10,13 +10,17 @@ import type { HighlightMode } from "@/lib/types";
 const highlightButtons: Array<{ mode: HighlightMode; label: string }> = [
   { mode: "ancestors", label: "الآباء" },
   { mode: "descendants", label: "الأبناء" },
-  { mode: "direct", label: "النسب المباشر" },
-  { mode: "branch", label: "الفرع الكامل" }
+  { mode: "direct", label: "سلسلة الأجداد" },
+  { mode: "branch", label: "شجرة الأبناء والأحفاد" }
 ];
 
 export function DetailPanel() {
   const { selectedId, setSelectedId, highlightMode, setHighlightMode } = useLineageStore();
   const person = peopleById.get(selectedId);
+  
+  const [showAllBrothers, setShowAllBrothers] = useState(false);
+  const [showAllChildren, setShowAllChildren] = useState(false);
+
   if (!person) return null;
   const father = getFather(person.id);
   const children = getChildren(person.id);
@@ -33,11 +37,14 @@ export function DetailPanel() {
     return person.name;
   }, [person, highlightMode]);
 
+  const displayedBrothers = showAllBrothers ? brothers : brothers.slice(0, 6);
+  const displayedChildren = showAllChildren ? children : children.slice(0, 6);
+
   return (
     <motion.aside
       id="detail-panel"
       tabIndex={-1}
-      className="museum-glass rounded-[32px] p-6 shadow-museum w-full text-right flex flex-col gap-4"
+      className="museum-glass rounded-[32px] p-6 shadow-museum w-full text-right flex flex-col gap-4 focus:outline-none"
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35 }}
@@ -90,7 +97,7 @@ export function DetailPanel() {
       {father && (
         <div className="mt-5">
           <h3 className="text-sm font-black text-emeraldDeep">الأب</h3>
-          <button className="mt-2 w-full rounded-2xl bg-white/70 px-4 py-3 text-right font-bold shadow-sm transition hover:bg-white" onClick={() => setSelectedId(father.id)}>
+          <button className="mt-2 w-full rounded-2xl bg-white/70 px-4 py-3 text-right font-bold shadow-sm transition hover:bg-white border border-emeraldDeep/5" onClick={() => setSelectedId(father.id)}>
             {father.name}
           </button>
         </div>
@@ -99,17 +106,29 @@ export function DetailPanel() {
       {father && (
         <div className="mt-5">
           <h3 className="text-sm font-black text-emeraldDeep">الإخوة</h3>
-          <div className="mt-2 flex flex-wrap gap-2">
+          <div className="mt-2 flex flex-col gap-2">
             {brothers.length > 0 ? (
-              brothers.map((brother) => (
-                <button
-                  key={brother.id}
-                  className="rounded-2xl bg-white/70 px-3 py-2 text-[13px] font-bold shadow-sm transition hover:bg-white text-right border border-emeraldDeep/5 hover:border-emeraldDeep/15"
-                  onClick={() => setSelectedId(brother.id)}
-                >
-                  {brother.name}
-                </button>
-              ))
+              <>
+                <div className="flex flex-wrap gap-2">
+                  {displayedBrothers.map((brother) => (
+                    <button
+                      key={brother.id}
+                      className="rounded-2xl bg-white/70 px-3 py-2 text-[13px] font-bold shadow-sm transition hover:bg-white text-right border border-emeraldDeep/5 hover:border-emeraldDeep/15"
+                      onClick={() => setSelectedId(brother.id)}
+                    >
+                      {brother.name}
+                    </button>
+                  ))}
+                </div>
+                {brothers.length > 6 && (
+                  <button
+                    onClick={() => setShowAllBrothers(!showAllBrothers)}
+                    className="text-xs text-amber-800/80 font-bold hover:underline text-right mt-1"
+                  >
+                    {showAllBrothers ? "عرض أقل ↑" : `عرض المزيد (+${brothers.length - 6}) ↓`}
+                  </button>
+                )}
+              </>
             ) : (
               <p className="text-xs text-charcoal/50 pr-2">لا يوجد إخوة ظاهرون في الشجرة لهذا العضو.</p>
             )}
@@ -119,13 +138,25 @@ export function DetailPanel() {
 
       <div className="mt-5">
         <h3 className="text-sm font-black text-emeraldDeep">الأبناء</h3>
-        <div className="mt-2 grid gap-2">
+        <div className="mt-2 flex flex-col gap-2">
           {children.length ? (
-            children.map((child) => (
-              <button key={child.id} className="rounded-2xl bg-white/70 px-4 py-3 text-right font-bold shadow-sm transition hover:bg-white" onClick={() => setSelectedId(child.id)}>
-                {child.name}
-              </button>
-            ))
+            <>
+              <div className="grid gap-2">
+                {displayedChildren.map((child) => (
+                  <button key={child.id} className="rounded-2xl bg-white/70 px-4 py-3 text-right font-bold shadow-sm transition hover:bg-white border border-emeraldDeep/5" onClick={() => setSelectedId(child.id)}>
+                    {child.name}
+                  </button>
+                ))}
+              </div>
+              {children.length > 6 && (
+                <button
+                  onClick={() => setShowAllChildren(!showAllChildren)}
+                  className="text-xs text-amber-800/80 font-bold hover:underline text-right mt-1"
+                >
+                  {showAllChildren ? "عرض أقل ↑" : `عرض المزيد (+${children.length - 6}) ↓`}
+                </button>
+              )}
+            </>
           ) : (
             <p className="rounded-2xl bg-white/55 px-4 py-3 text-sm text-charcoal/60">لا يوجد ابناء</p>
           )}
