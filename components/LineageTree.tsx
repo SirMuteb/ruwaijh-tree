@@ -59,22 +59,17 @@ function TreeNode({
   const dotSize = cardSize === "sm" ? "h-1.5 w-1.5" : "h-2 w-2";
 
   return (
-    <div className="flex flex-col relative" id={`node-${personId}`}>
+    <div className="flex flex-col items-center relative" id={`node-${personId}`}>
       {/* Onboarding Visual Tip for Seniors */}
       {isRootNode && selectedId === RUWAYJIH_ID && (
         <div className="absolute top-[-42px] right-4 z-20 bg-goldRich text-charcoal text-[12px] font-black px-3 py-1 rounded-full animate-bounce shadow-md border border-amber-900/10 flex items-center gap-1">
-          <span>انقر هنا للتفاصيل والأبناء </span>
+          <span>انقر هنا للتفاصيل والأبناء 👆</span>
         </div>
       )}
 
-      <div className="flex items-center relative">
-        {/* CSS horizontal branch elbow connector (Thicker for Seniors) */}
-        {depth > 0 && (
-          <div className="absolute right-[-16px] top-1/2 w-4 h-[2.5px] bg-amber-800/30 pointer-events-none" />
-        )}
-
+      <div className="flex flex-col items-center relative">
         {/* Card Body */}
-        <motion.div
+        <div
           onClick={() => setSelectedId(personId)}
           className={`
             group flex items-center justify-between rounded-2xl border transition-all duration-200 cursor-pointer shadow-sm select-none min-w-[200px] max-w-[320px]
@@ -89,7 +84,6 @@ function TreeNode({
             }
             ${person.isDeceased ? "opacity-90" : ""}
           `}
-          layoutId={`card-layout-${personId}`}
         >
           <div className="flex items-center gap-3">
             {/* Status dot */}
@@ -156,27 +150,50 @@ function TreeNode({
               )}
             </button>
           )}
-        </motion.div>
+        </div>
       </div>
 
-      {/* Children list nested below with right-border representing the vertical relationship line */}
+      {/* Children list nested below with horizontal flow connected by tree branches */}
       {isExpanded && hasChildren && (
-        <div className="mr-5 border-r-[2.5px] border-amber-800/25 pr-4 relative flex flex-col gap-3 mt-3">
-          {children.map((child, idx) => (
-            <TreeNode
-              key={child.id}
-              personId={child.id}
-              expandedIds={expandedIds}
-              toggleExpand={toggleExpand}
-              selectedId={selectedId}
-              setSelectedId={setSelectedId}
-              highlightedIds={highlightedIds}
-              depth={depth + 1}
-              isFirst={idx === 0}
-              isLast={idx === children.length - 1}
-              cardSize={cardSize}
-            />
-          ))}
+        <div className="relative flex flex-row items-start justify-center gap-x-8 gap-y-12 pt-8">
+          {/* Vertical line going down from parent card center */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[2.5px] h-8 bg-amber-800/25" />
+
+          {children.map((child, idx) => {
+            const isFirstChild = idx === 0;
+            const isLastChild = idx === children.length - 1;
+            return (
+              <div key={child.id} className="relative flex flex-col items-center pt-8">
+                {/* Horizontal connector line segment */}
+                {children.length > 1 && (
+                  <div 
+                    className={`absolute top-0 h-[2.5px] bg-amber-800/25 ${
+                      isFirstChild 
+                        ? "left-0 right-1/2" 
+                        : isLastChild 
+                        ? "right-0 left-1/2" 
+                        : "left-0 right-0"
+                    }`}
+                  />
+                )}
+                {/* Vertical line going down to this child card */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[2.5px] h-8 bg-amber-800/25" />
+                
+                <TreeNode
+                  personId={child.id}
+                  expandedIds={expandedIds}
+                  toggleExpand={toggleExpand}
+                  selectedId={selectedId}
+                  setSelectedId={setSelectedId}
+                  highlightedIds={highlightedIds}
+                  depth={depth + 1}
+                  isFirst={isFirstChild}
+                  isLast={isLastChild}
+                  cardSize={cardSize}
+                />
+              </div>
+            );
+          })}
         </div>
       )}
     </div>
@@ -342,7 +359,7 @@ export function LineageTree({ registerActions }: { registerActions: (actions: { 
 
       {/* Main tree viewport */}
       <div className="relative z-10 flex-1 overflow-auto p-8 md:p-12 scroll-smooth">
-        <div className="min-w-[max-content] flex flex-col items-start justify-start pr-4 pb-16 gap-6">
+        <div className="min-w-[max-content] flex flex-col items-center justify-start pb-16 gap-12 mx-auto">
           {/* Heritage Banner Card for Ruwayjih Ancestors */}
           <div className="museum-glass border border-goldRich/30 bg-white/70 rounded-3xl p-5 shadow-museum max-w-[550px] text-right flex flex-col gap-2">
             <div className="flex items-center gap-2">
