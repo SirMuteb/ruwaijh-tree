@@ -105,8 +105,8 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      {/* Sticky Bottom Navigation on Mobile */}
-      <BottomNav />
+      {/* Sticky Bottom Navigation on Mobile (hidden when member details sheet is open) */}
+      {!isMobileSheetOpen && <BottomNav />}
     </main>
   );
 }
