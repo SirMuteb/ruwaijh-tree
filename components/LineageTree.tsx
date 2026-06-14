@@ -274,7 +274,7 @@ export function LineageTree({ registerActions }: { registerActions: (actions: { 
   return (
     <section
       dir="rtl"
-      className="relative mx-auto mt-2 h-[82vh] min-h-[620px] lg:mt-4 lg:h-[76vh] lg:min-h-[580px] w-full overflow-hidden rounded-[32px] border border-amber-900/20 shadow-museum flex flex-col"
+      className="relative mx-auto mt-2 h-[88vh] min-h-[680px] lg:mt-4 lg:h-[76vh] lg:min-h-[580px] w-full overflow-hidden rounded-[32px] border border-amber-900/20 shadow-museum flex flex-col"
       style={{ background: "linear-gradient(160deg,#fdf6e3 0%,#f5e6c8 60%,#e8d5a3 100%)" }}
     >
       {/* Parchment texture overlay */}

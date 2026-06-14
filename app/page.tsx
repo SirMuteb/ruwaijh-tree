@@ -37,10 +37,10 @@ export default function Home() {
       <WelcomeModal />
       <TopBar onReset={() => actions.current.reset()} onFit={() => actions.current.fit()} />
       
-      <div className="mx-auto my-6 grid w-[min(1520px,calc(100vw-24px))] gap-6 lg:grid-cols-[1fr_390px] items-start">
+      <div className="mx-auto my-3 sm:my-6 grid w-[min(1520px,calc(100vw-24px))] gap-4 sm:gap-6 lg:grid-cols-[1fr_390px] items-start">
         {/* Website Goal Phrase */}
-        <div className="lg:col-start-1 lg:row-start-1 museum-glass border border-emeraldDeep/10 rounded-[28px] p-5 text-right bg-white/65 shadow-sm">
-          <p className="text-sm md:text-base font-bold text-emeraldDeep leading-7" style={{ fontFamily: "var(--font-thmanyah-sans), sans-serif" }}>
+        <div className="lg:col-start-1 lg:row-start-1 museum-glass border border-emeraldDeep/10 rounded-[28px] p-4 sm:p-5 text-right bg-white/65 shadow-sm">
+          <p className="text-xs sm:text-sm md:text-base font-bold text-emeraldDeep leading-6 sm:leading-7" style={{ fontFamily: "var(--font-thmanyah-sans), sans-serif" }}>
             من جذورٍ راسخة في عمق الماضي إلى فروعٍ تمتد نحو المستقبل، توحدنا هذه الشجرة الرقمية لحفظ الأنساب وتوثيق التاريخ العائلي للأجيال القادمة.
           </p>
         </div>
