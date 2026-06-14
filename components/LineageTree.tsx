@@ -59,15 +59,20 @@ function TreeNode({
   const dotSize = cardSize === "sm" ? "h-1.5 w-1.5" : "h-2 w-2";
 
   return (
-    <div className="flex flex-col items-center relative" id={`node-${personId}`}>
+    <div className="flex flex-col relative" id={`node-${personId}`}>
       {/* Onboarding Visual Tip for Seniors */}
       {isRootNode && selectedId === RUWAYJIH_ID && (
         <div className="absolute top-[-42px] right-4 z-20 bg-goldRich text-charcoal text-[12px] font-black px-3 py-1 rounded-full animate-bounce shadow-md border border-amber-900/10 flex items-center gap-1">
-          <span>انقر هنا للتفاصيل والأبناء 👆</span>
+          <span>انقر هنا للتفاصيل والأبناء</span>
         </div>
       )}
 
-      <div className="flex flex-col items-center relative">
+      <div className="flex items-center relative">
+        {/* CSS horizontal branch elbow connector (Thicker for Seniors) */}
+        {depth > 0 && (
+          <div className="absolute right-[-16px] top-1/2 w-4 h-[2.5px] bg-amber-800/30 pointer-events-none" />
+        )}
+
         {/* Card Body */}
         <div
           onClick={() => setSelectedId(personId)}
@@ -153,47 +158,24 @@ function TreeNode({
         </div>
       </div>
 
-      {/* Children list nested below with horizontal flow connected by tree branches */}
+      {/* Children list nested below with right-border representing the vertical relationship line */}
       {isExpanded && hasChildren && (
-        <div className="relative flex flex-row items-start justify-center gap-x-8 gap-y-12 pt-8">
-          {/* Vertical line going down from parent card center */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[2.5px] h-8 bg-amber-800/25" />
-
-          {children.map((child, idx) => {
-            const isFirstChild = idx === 0;
-            const isLastChild = idx === children.length - 1;
-            return (
-              <div key={child.id} className="relative flex flex-col items-center pt-8">
-                {/* Horizontal connector line segment */}
-                {children.length > 1 && (
-                  <div 
-                    className={`absolute top-0 h-[2.5px] bg-amber-800/25 ${
-                      isFirstChild 
-                        ? "left-0 right-1/2" 
-                        : isLastChild 
-                        ? "right-0 left-1/2" 
-                        : "left-0 right-0"
-                    }`}
-                  />
-                )}
-                {/* Vertical line going down to this child card */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[2.5px] h-8 bg-amber-800/25" />
-                
-                <TreeNode
-                  personId={child.id}
-                  expandedIds={expandedIds}
-                  toggleExpand={toggleExpand}
-                  selectedId={selectedId}
-                  setSelectedId={setSelectedId}
-                  highlightedIds={highlightedIds}
-                  depth={depth + 1}
-                  isFirst={isFirstChild}
-                  isLast={isLastChild}
-                  cardSize={cardSize}
-                />
-              </div>
-            );
-          })}
+        <div className="mr-5 border-r-[2.5px] border-amber-800/25 pr-4 relative flex flex-col gap-3 mt-3">
+          {children.map((child, idx) => (
+            <TreeNode
+              key={child.id}
+              personId={child.id}
+              expandedIds={expandedIds}
+              toggleExpand={toggleExpand}
+              selectedId={selectedId}
+              setSelectedId={setSelectedId}
+              highlightedIds={highlightedIds}
+              depth={depth + 1}
+              isFirst={idx === 0}
+              isLast={idx === children.length - 1}
+              cardSize={cardSize}
+            />
+          ))}
         </div>
       )}
     </div>
@@ -292,7 +274,7 @@ export function LineageTree({ registerActions }: { registerActions: (actions: { 
   return (
     <section
       dir="rtl"
-      className="relative mx-auto mt-4 h-[76vh] min-h-[580px] w-full overflow-hidden rounded-[32px] border border-amber-900/20 shadow-museum flex flex-col"
+      className="relative mx-auto mt-2 h-[82vh] min-h-[620px] lg:mt-4 lg:h-[76vh] lg:min-h-[580px] w-full overflow-hidden rounded-[32px] border border-amber-900/20 shadow-museum flex flex-col"
       style={{ background: "linear-gradient(160deg,#fdf6e3 0%,#f5e6c8 60%,#e8d5a3 100%)" }}
     >
       {/* Parchment texture overlay */}
@@ -305,13 +287,13 @@ export function LineageTree({ registerActions }: { registerActions: (actions: { 
       />
 
       {/* Internal Control Bar */}
-      <div className="relative z-10 flex flex-wrap items-center justify-between gap-4 border-b border-amber-900/10 bg-white/40 px-6 py-3.5 backdrop-blur-sm">
-        <div className="flex items-center gap-2">
+      <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 border-b border-amber-900/10 bg-white/40 px-4 py-2.5 backdrop-blur-sm sm:px-6 sm:py-3.5">
+        <div className="hidden sm:flex items-center gap-2">
           <HelpCircle className="h-5 w-5 text-emeraldDeep/75" />
           <span className="text-sm md:text-base font-bold text-emeraldDeep">تصفح شجرة النسب</span>
         </div>
 
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2 md:gap-3 w-full sm:w-auto justify-between sm:justify-start">
           {/* Sizing Controls */}
           <div className="flex rounded-2xl border border-emeraldDeep/15 bg-white/60 p-1">
             <button
@@ -358,17 +340,17 @@ export function LineageTree({ registerActions }: { registerActions: (actions: { 
       </div>
 
       {/* Main tree viewport */}
-      <div className="relative z-10 flex-1 overflow-auto p-8 md:p-12 scroll-smooth">
-        <div className="min-w-[max-content] flex flex-col items-center justify-start pb-16 gap-12 mx-auto">
+      <div className="relative z-10 flex-1 overflow-auto p-4 sm:p-8 md:p-12 scroll-smooth">
+        <div className="min-w-[max-content] flex flex-col items-start justify-start pr-4 pb-16 gap-6">
           {/* Heritage Banner Card for Ruwayjih Ancestors */}
-          <div className="museum-glass border border-goldRich/30 bg-white/70 rounded-3xl p-5 shadow-museum max-w-[550px] text-right flex flex-col gap-2">
+          <div className="museum-glass border border-goldRich/30 bg-white/70 rounded-3xl p-3.5 sm:p-5 shadow-museum max-w-[550px] text-right flex flex-col gap-1.5 sm:gap-2">
             <div className="flex items-center gap-2">
               <span className="text-[10px] font-black text-amber-800/90 bg-amber-500/15 px-2.5 py-0.5 rounded-full">النسب المتصل وصولاً للجد الأكبر</span>
             </div>
-            <h3 className="text-lg font-black text-emeraldDeep leading-7" style={{ fontFamily: "var(--font-thmanyah-serif), serif" }}>
+            <h3 className="text-sm sm:text-lg font-black text-emeraldDeep leading-6 sm:leading-7" style={{ fontFamily: "var(--font-thmanyah-serif), serif" }}>
               رويجح بن وقيتان بن عايد بن سالم بن محمد بن عبيد بن عباد
             </h3>
-            <p className="text-xs text-charcoal/60 leading-5">
+            <p className="text-[11px] sm:text-xs text-charcoal/60 leading-relaxed">
               تبدأ الشجرة المعروضة بالأسفل من الجد **رويجح**، وهنا نثبت تسلسل آبائه وأجداده كما ورد في وثائق النسب وصولاً للجد الأكبر **عباد**.
             </p>
           </div>
