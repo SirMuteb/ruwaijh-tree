@@ -40,13 +40,13 @@ export function TopBar({ onReset, onFit }: { onReset: () => void; onFit: () => v
             {results.map((person) => (
               <button
                 key={person.id}
-                className="flex w-full items-center justify-between px-4 py-3 text-right transition hover:bg-emeraldDeep/7"
+                className="flex min-h-[48px] w-full items-center justify-between px-4 py-3.5 text-right transition hover:bg-emeraldDeep/7"
                 onClick={() => {
                   setSelectedId(person.id);
                   setQuery("");
                 }}
               >
-                <span className="font-semibold">{getLineageName(person.id, 4)}</span>
+                <span className="font-semibold text-sm md:text-base">{getLineageName(person.id, 4)}</span>
                 <span className="text-xs text-emeraldDeep/65">الجيل {(person.generation ?? 0) + 1}</span>
               </button>
             ))}
@@ -54,7 +54,7 @@ export function TopBar({ onReset, onFit }: { onReset: () => void; onFit: () => v
         )}
       </div>
 
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="hidden md:flex flex-wrap items-center gap-2">
         <Segmented mode={viewMode} setMode={setViewMode} />
         <IconButton label="احتواء الشجرة" onClick={onFit} icon={<Compass />} />
         <IconButton label="إعادة ضبط العرض" onClick={onReset} icon={<RotateCcw />} />

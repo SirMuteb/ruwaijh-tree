@@ -124,7 +124,7 @@ function TreeNode({
                 toggleExpand(personId);
               }}
               className={`
-                flex h-6.5 w-6.5 shrink-0 items-center justify-center rounded-lg border transition-all duration-150
+                flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border transition-all duration-150
                 ${isSelected
                   ? "border-white/20 hover:bg-white/10 text-white"
                   : "border-emeraldDeep/10 hover:bg-emeraldDeep/5 text-emeraldDeep"
@@ -133,9 +133,9 @@ function TreeNode({
               aria-label={isExpanded ? "طي الفرع" : "بسط الفرع"}
             >
               {isExpanded ? (
-                <ChevronDown className="h-4 w-4" />
+                <ChevronDown className="h-5 w-5" />
               ) : (
-                <ChevronLeft className="h-4 w-4" />
+                <ChevronLeft className="h-5 w-5" />
               )}
             </button>
           )}
@@ -276,48 +276,51 @@ export function LineageTree({ registerActions }: { registerActions: (actions: { 
       <div className="relative z-10 flex flex-wrap items-center justify-between gap-4 border-b border-amber-900/10 bg-white/40 px-6 py-3.5 backdrop-blur-sm">
         <div className="flex items-center gap-2">
           <HelpCircle className="h-5 w-5 text-emeraldDeep/75" />
-          <span className="text-sm font-semibold text-emeraldDeep">تصفح شجرة النسب</span>
+          <span className="text-sm md:text-base font-bold text-emeraldDeep">تصفح شجرة النسب</span>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-3">
           {/* Sizing Controls */}
-          <div className="flex rounded-xl border border-emeraldDeep/15 bg-white/60 p-0.5">
+          <div className="flex rounded-2xl border border-emeraldDeep/15 bg-white/60 p-1">
             <button
               onClick={() => setCardSize("sm")}
-              className={`rounded-lg px-2.5 py-1 text-xs font-bold transition ${cardSize === "sm" ? "bg-emeraldDeep text-white shadow-sm" : "text-emeraldDeep"}`}
+              className={`rounded-xl px-3 py-2 text-[13px] md:text-sm font-bold transition min-h-[38px] ${cardSize === "sm" ? "bg-emeraldDeep text-white shadow-sm" : "text-emeraldDeep"}`}
+              style={{ minWidth: "48px" }}
             >
               صغير
             </button>
             <button
               onClick={() => setCardSize("md")}
-              className={`rounded-lg px-2.5 py-1 text-xs font-bold transition ${cardSize === "md" ? "bg-emeraldDeep text-white shadow-sm" : "text-emeraldDeep"}`}
+              className={`rounded-xl px-3 py-2 text-[13px] md:text-sm font-bold transition min-h-[38px] ${cardSize === "md" ? "bg-emeraldDeep text-white shadow-sm" : "text-emeraldDeep"}`}
+              style={{ minWidth: "48px" }}
             >
               متوسط
             </button>
             <button
               onClick={() => setCardSize("lg")}
-              className={`rounded-lg px-2.5 py-1 text-xs font-bold transition ${cardSize === "lg" ? "bg-emeraldDeep text-white shadow-sm" : "text-emeraldDeep"}`}
+              className={`rounded-xl px-3 py-2 text-[13px] md:text-sm font-bold transition min-h-[38px] ${cardSize === "lg" ? "bg-emeraldDeep text-white shadow-sm" : "text-emeraldDeep"}`}
+              style={{ minWidth: "48px" }}
             >
               كبير
             </button>
           </div>
 
-          <span className="h-4 w-[1px] bg-amber-900/10" />
+          <span className="hidden sm:block h-6 w-[1px] bg-amber-900/10" />
 
           {/* Quick collapse/expand triggers */}
           <button
             onClick={fit}
-            className="flex items-center gap-1.5 rounded-xl border border-emeraldDeep/10 bg-white/65 px-3 py-1.5 text-xs font-bold text-emeraldDeep hover:border-emeraldDeep/30 transition shadow-sm"
+            className="flex items-center justify-center gap-2 rounded-2xl border border-emeraldDeep/10 bg-white/65 px-4 py-2.5 text-[13px] md:text-sm font-bold text-emeraldDeep hover:border-emeraldDeep/30 transition shadow-sm min-h-[44px]"
           >
-            <Compass className="h-3.5 w-3.5" />
+            <Compass className="h-4 w-4" />
             توسيع الكل
           </button>
           <button
             onClick={reset}
-            className="flex items-center gap-1.5 rounded-xl border border-emeraldDeep/10 bg-white/65 px-3 py-1.5 text-xs font-bold text-emeraldDeep hover:border-emeraldDeep/30 transition shadow-sm"
+            className="flex items-center justify-center gap-2 rounded-2xl border border-emeraldDeep/10 bg-white/65 px-4 py-2.5 text-[13px] md:text-sm font-bold text-emeraldDeep hover:border-emeraldDeep/30 transition shadow-sm min-h-[44px]"
           >
-            <RotateCcw className="h-3.5 w-3.5" />
-            طي إلى الجذر
+            <RotateCcw className="h-4 w-4" />
+            طي للجذر
           </button>
         </div>
       </div>
